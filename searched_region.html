@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Results from Search by Region
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Food</th>
+                <th>Rate</th>
+                <th>Region</th>
+                <th>Style</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for region in regions %}
+                <tr>
+                    <td>{{ region["restaurant"] }}</td>
+                    <td>{{ region["food"] }}</td>
+                    <td>{{ region["rate"] }}</td>
+                    <td>{{ region["region"] }}</td>
+                    <td>{{ region["style"] }}</td>
+                    <td>{{ region["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
