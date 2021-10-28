@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search by Region
+{% endblock %}
+
+{% block main %}
+    <form action="/search_region" method="post">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label class="font-weight-normal" for="region">Region</label>&nbsp;
+                </div>
+                <div class="col-2">
+                    <select class="form-control" id="region" name="region">
+                        <option value="American">American</option>
+                        <option value="Taiwanese">Taiwanese</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="European">European</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Malaysian">Malaysian</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <br>
+            </div>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        </div>
+    </form>
+{% endblock %}

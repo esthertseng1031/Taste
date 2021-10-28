@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Food</th>
+                <th>Rate</th>
+                <th>Region</th>
+                <th>Style</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in records %}
+                <tr>
+                    <td>{{ record["restaurant"] }}</td>
+                    <td>{{ record["food"] }}</td>
+                    <td>{{ record["rate"] }}</td>
+                    <td>{{ record["region"] }}</td>
+                    <td>{{ record["style"] }}</td>
+                    <td>{{ record["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

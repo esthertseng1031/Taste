@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label class="font-weight-normal" for="restaurant">Restaurant</label>&nbsp;
+                </div>
+                <div class="col-3">
+                    <input autocomplete="off" autofocus class="form-control" id="restaurant" name="restaurant" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label class="font-weight-normal" for="food">Food</label>&nbsp;
+                </div>
+                <div class="col-3">
+                    <input autocomplete="off" class="form-control" id="food" name="food" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label class="font-weight-normal" for="rate">Rate</label>&nbsp;
+                </div>
+                <div class="col-3">
+                    <input class="form-control" id="rate" name="rate" type="number" min="0" max="10">
+                </div>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label for="region">Region</label>&nbsp;
+                </div>
+                <div class="col-3">
+                    <select class="form-control" id="region" name="region">
+                        <option value="American">American</option>
+                        <option value="Taiwanese">Taiwanese</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="Korean">Korean</option>
+                        <option value="European">European</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Malaysian">Malaysian</option>
+                        <option value="Thai">Thai</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-2">
+                    <label for="style">Style</label>&nbsp;
+                </div>
+                <div class="col-3">
+                    <select class="form-control" id="style" name="style">
+                        <option value="Traditional">Traditional</option>
+                        <option value="Fusion">Fusion</option>
+                        <option value="Haute">Haute</option>
+                        <option value="Nouvelle">Nouvelle</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Fast Food">Fast Food</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <br>
+                <br>
+            </div>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Add</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Random
+{% endblock %}
+
+{% block main %}
+    <form action="/random" method="post">
+        <div class="form-group">
+            <label class="font-weight-normal">Get a random idea!</label>
+        </div>
+
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Go</button>
+    </form>
+{% endblock %}

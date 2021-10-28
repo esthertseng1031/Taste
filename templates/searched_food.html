@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Results from Search by Food
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Food</th>
+                <th>Rate</th>
+                <th>Region</th>
+                <th>Style</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for food in foods %}
+                <tr>
+                    <td>{{ food["restaurant"] }}</td>
+                    <td>{{ food["food"] }}</td>
+                    <td>{{ food["rate"] }}</td>
+                    <td>{{ food["region"] }}</td>
+                    <td>{{ food["style"] }}</td>
+                    <td>{{ food["time"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
